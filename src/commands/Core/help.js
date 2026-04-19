@@ -74,91 +74,91 @@ async function createInitialHelpMenu(client) {
 
     const botName = client?.user?.username || "Bot";
     const embed = createEmbed({ 
-        title: `🤖 ${botName} Help Center`,
-        description: "Your all-in-one Discord companion for moderation, economy, fun, and server management.",
+        title: `🤖 ${botName} Centre d’aide`,
+        description: "Votre compagnon Discord tout-en-un pour la modération, l’économie, le divertissement et la gestion du serveur.",
         color: 'primary'
     });
 
     embed.addFields(
         {
-            name: "🛡️ **Moderation**",
-            value: "Server moderation, user management, and enforcement tools",
+            name: "🛡️ **Modération**",
+            value: "Modération du serveur, gestion des utilisateurs et outils d’application des règles",
             inline: true
         },
         {
-            name: "💰 **Economy**",
-            value: "Currency system, shops, and virtual economy",
+            name: "💰 **Économie**",
+            value: "Système de monnaie, boutiques et économie virtuelle",
             inline: true
         },
         {
-            name: "🎮 **Fun**",
-            value: "Games, entertainment, and interactive commands",
+            name: "🎮 **Divertissement**",
+            value: "Jeux, divertissement et commandes interactives",
             inline: true
         },
         {
-            name: "📊 **Leveling**",
-            value: "User levels, XP system, and progression tracking",
+            name: "📊 **Niveaux**",
+            value: "Niveaux des utilisateurs, système d’XP et suivi de progression",
             inline: true
         },
         {
             name: "🎫 **Tickets**",
-            value: "Support ticket system for server management",
+            value: "Système de tickets de support pour la gestion du serveur",
             inline: true
         },
         {
-            name: "🎉 **Giveaways**",
-            value: "Automated giveaway management and distribution",
+            name: "🎉 **Concours**",
+            value: "Gestion automatisée des concours et distribution des gains",
             inline: true
         },
         {
-            name: "👋 **Welcome**",
-            value: "Member welcome messages and onboarding",
+            name: "👋 **Bienvenue**",
+            value: "Messages de bienvenue et intégration des nouveaux membres",
             inline: true
         },
         {
-            name: "🎂 **Birthdays**",
-            value: "Birthday tracking and celebration features",
+            name: "🎂 **Anniversaires**",
+            value: "Suivi des anniversaires et fonctionnalités de célébration",
             inline: true
         },
         {
-            name: "👥 **Community**",
-            value: "Community tools, applications, and member engagement",
+            name: "👥 **Communauté**",
+            value: "Outils communautaires, candidatures et engagement des membres",
             inline: true
         },
         {
-            name: "⚙️ **Config**",
-            value: "Server and bot configuration management commands",
+            name: "⚙️ **Configuration**",
+            value: "Commandes de configuration du serveur et du bot",
             inline: true
         },
         {
-            name: "🔢 **Counter**",
-            value: "Live counter channel setup and counter controls",
+            name: "🔢 **Compteur**",
+            value: "Configuration de salon compteur en temps réel et contrôles associés",
             inline: true
         },
         {
-            name: "🎙️ **Join to Create**",
-            value: "Dynamic voice channel creation and management",
+            name: "🎙️ **Créer en rejoignant**",
+            value: "Création et gestion dynamiques de salons vocaux",
             inline: true
         },
         {
-            name: "🎭 **Reaction Roles**",
-            value: "Self-assignable roles using reaction-role systems",
+            name: "🎭 **Rôles par réaction**",
+            value: "Rôles auto-attribuables via des systèmes de réactions",
             inline: true
         },
         {
-            name: "✅ **Verification**",
-            value: "Member verification workflows and access gating",
+            name: "✅ **Vérification**",
+            value: "Systèmes de vérification des membres et contrôle d’accès",
             inline: true
         },
         {
-            name: "🔧 **Utilities**",
-            value: "Useful tools and server utilities",
+            name: "🔧 **Utilitaires**",
+            value: "Outils utiles et utilitaires pour le serveur",
             inline: true
         }
     );
 
     embed.setFooter({ 
-        text: "Made with ❤️" 
+        text: "Les cacaouhètes c'est super !" 
     });
     embed.setTimestamp();
 
@@ -179,7 +179,7 @@ async function createInitialHelpMenu(client) {
 
     const selectRow = createSelectMenu(
         CATEGORY_SELECT_ID,
-        "Select to view the commands",
+        "Sélectionnez pour voir les commandes",
         options,
     );
 
@@ -198,7 +198,7 @@ async function createInitialHelpMenu(client) {
 export default {
     data: new SlashCommandBuilder()
         .setName("help")
-        .setDescription("Displays the help menu with all available commands"),
+        .setDescription("Affiche le menu d’aide avec toutes les commandes disponibles"),
 
     async execute(interaction, guildConfig, client) {
         
@@ -215,8 +215,8 @@ export default {
         setTimeout(async () => {
             try {
                 const closedEmbed = createEmbed({
-                    title: "Help menu closed",
-                    description: "Help menu has been closed, use /help again.",
+                    title: "Menu d’aide fermé",
+                    description: "Le menu d’aide a été fermé, utilisez /help à nouveau.",
                     color: "secondary",
                 });
 
