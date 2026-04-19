@@ -61,9 +61,9 @@ export const botConfig = {
   applications: {
     // Default questions shown when someone fills out an application.
     defaultQuestions: [
-      { question: "What is your name?", required: true },
-      { question: "How old are you?", required: true },
-      { question: "Why do you want to join?", required: true },
+      { question: "Quel est votre nom ?", required: true },
+      { question: "Quel âge avez-vous ?", required: true },
+      { question: "Pourquoi voulez-vous rejoindre ?", required: true },
     ],
 
     // Embed colors by application status.
@@ -216,22 +216,22 @@ export const botConfig = {
       none: {
         emoji: "⚪",
         color: "#95A5A6",
-        label: "None",
+        label: "Non défini",
       },
       low: {
         emoji: "🟢",
         color: "#2ECC71",
-        label: "Low",
+        label: "Faible",
       },
       medium: {
         emoji: "🟡",
         color: "#F1C40F",
-        label: "Medium",
+        label: "Moyen",
       },
       high: {
         emoji: "🔴",
         color: "#E74C3C",
-        label: "High",
+        label: "Élevé",
       },
       urgent: {
         emoji: "🚨",
@@ -294,10 +294,10 @@ export const botConfig = {
   // =========================
   verification: {
     // Message shown when posting the verification panel.
-    defaultMessage: "Click the button below to verify yourself and gain access to the server!",
+    defaultMessage: "Clique sur le bouton ci-dessous pour vous vérifier et accéder au serveur !",
 
     // Text on the verification button.
-    defaultButtonText: "Verify",
+    defaultButtonText: "Vérifier",
 
     // Automatic verification behavior.
     autoVerify: {
@@ -324,9 +324,9 @@ export const botConfig = {
 
       // Human-readable descriptions for each criteria mode.
       criteria: {
-        account_age: "Account must be older than specified days",
-        server_size: "All users if server has less than 1000 members",
-        none: "All users immediately"
+        account_age: "Le compte doit être plus ancien que le nombre de jours spécifié.",
+        server_size: "Tous les utilisateurs si le serveur compte moins de 1000 membres.",
+        none: "Tous les utilisateurs immédiatement."
       }
     },
 
@@ -364,11 +364,11 @@ export const botConfig = {
     // Welcome template posted when a user joins.
     // Placeholders: {user}, {server}, {memberCount}
     defaultWelcomeMessage:
-      "Welcome {user} to {server}! We now have {memberCount} members!",
+      "Bienvenue {user} sur {server} ! Nous avons maintenant {memberCount} membres !",
     // Goodbye template posted when a user leaves.
     // Placeholders: {user}, {memberCount}
     defaultGoodbyeMessage:
-      "{user} has left the server. We now have {memberCount} members.",
+      "{user} a quitté le serveur. Nous avons maintenant {memberCount} membres.",
     // Channel ID for welcome messages.
     defaultWelcomeChannel: null,
     // Channel ID for goodbye messages.
@@ -381,8 +381,8 @@ export const botConfig = {
   counters: {
     defaults: {
       // Default naming/description templates for counter entries.
-      name: "{name} Counter",
-      description: "Server {name} counter",
+      name: "Compteur {name}",
+      description: "Compteur du serveur {name}",
       // Channel type used for counters (typically "voice").
       type: "voice",
       // Channel name format. `{count}` is replaced automatically.
@@ -396,26 +396,26 @@ export const botConfig = {
     },
     messages: {
       // Default response messages for counter actions.
-      created: "✅ Created counter **{name}**",
-      deleted: "🗑️ Deleted counter **{name}**",
-      updated: "🔄 Updated counter **{name}**",
+        created: "✅ Compteur **{name}** créé",
+        deleted: "🗑️ Compteur **{name}** supprimé",
+        updated: "🔄 Compteur **{name}** mis à jour",
     },
     types: {
       // Built-in counter types and how each count is calculated.
       members: {
-        name: "👥 Members",
+        name: "👥 Membres",
         description: "Total members in the server",
         getCount: (guild) => guild.memberCount.toString(),
       },
       bots: {
         name: "🤖 Bots",
-        description: "Total bot accounts in the server",
+        description: "Nombre total de comptes bots sur le serveur",
         getCount: (guild) =>
           guild.members.cache.filter((m) => m.user.bot).size.toString(),
       },
       members_only: {
-        name: "👤 Humans",
-        description: "Total human members (non-bots)",
+        name: "👤 Humains",
+        description: "Nombre total de membres humains (non-bots)",
         getCount: (guild) =>
           guild.members.cache.filter((m) => !m.user.bot).size.toString(),
       },
@@ -426,13 +426,13 @@ export const botConfig = {
   // GENERIC BOT MESSAGES
   // =========================
   messages: {
-    noPermission: "You do not have permission to use this command.",
-    cooldownActive: "Please wait {time} before using this command again.",
-    errorOccurred: "An error occurred while executing this command.",
+    noPermission: "Vous n’avez pas la permission d’utiliser cette commande.",
+    cooldownActive: "Veuillez attendre {time} avant d’utiliser à nouveau cette commande.",
+    errorOccurred: "Une erreur s’est produite lors de l’exécution de cette commande.",
     missingPermissions:
-      "I am missing required permissions to perform this action.",
-    commandDisabled: "This command has been disabled.",
-    maintenanceMode: "The bot is currently in maintenance mode.",
+      "Je n’ai pas les permissions nécessaires pour effectuer cette action.",
+    commandDisabled: "Cette commande a été désactivée.",
+    maintenanceMode: "Le bot est actuellement en mode maintenance.",
   },
 
   // =========================
