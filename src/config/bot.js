@@ -216,22 +216,22 @@ export const botConfig = {
       none: {
         emoji: "⚪",
         color: "#95A5A6",
-        label: "Non défini",
+        label: "None",
       },
       low: {
         emoji: "🟢",
         color: "#2ECC71",
-        label: "Faible",
+        label: "Low",
       },
       medium: {
         emoji: "🟡",
         color: "#F1C40F",
-        label: "Moyen",
+        label: "Medium",
       },
       high: {
         emoji: "🔴",
         color: "#E74C3C",
-        label: "Élevé",
+        label: "High",
       },
       urgent: {
         emoji: "🚨",
